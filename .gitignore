@@ -1,0 +1,32 @@
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+*.tmp
+*.temp
+
+# Archivos de editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Archivos de respaldo
+*.bak
+*~
+
+# Logs
+*.log
+
+# Archivos temporales de Windows
+desktop.ini
+
+# Archivos temporales de macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Archivos de Node.js (si se usa en el futuro)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

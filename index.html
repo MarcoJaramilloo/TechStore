@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Tienda de Tecnología</title>
+    <link rel="icon" type="image/png" href="images/Gemini_Generated_Image_jbkrocjbkrocjbkr.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/Gemini_Generated_Image_jbkrocjbkrocjbkr.png" alt="TechStore Logo" class="logo-img">
+                <h1>TechStore</h1>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link active">Inicio</a></li>
+                    <li><a href="acerca.html" class="nav-link">Acerca de</a></li>
+                    <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+                    <li><a href="#productos" class="nav-link">Productos</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <i class="fas fa-shopping-cart"></i>
+                <i class="fas fa-user"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Buscador -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-bar">
+                <input type="search" id="searchInput" placeholder="Buscar productos..." required>
+                <button type="button" onclick="buscarProductos()">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Principal -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>¡Descubre la última tecnología! 💻📱🖨️</h2>
+                <p>Los mejores celulares, laptops, impresoras y accesorios al mejor precio</p>
+                <button class="cta-button" onclick="scrollToProducts()">Ver Productos</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Características -->
+    <section class="caracteristicas-section">
+        <div class="container">
+            <div class="caracteristicas-content">
+                <div class="caracteristicas-header">
+                    <h2 class="titulo-elegante">¿Por qué elegir TechStore?</h2>
+                    <p class="subtitulo-elegante">Más que una tienda, somos tu socio tecnológico de confianza</p>
+                </div>
+                
+                <div class="caracteristicas-grid">
+                    <div class="caracteristica-item">
+                        <div class="caracteristica-icono">
+                            <i class="fas fa-shipping-fast"></i>
+                        </div>
+                        <h3 class="caracteristica-titulo">Envío Express</h3>
+                        <p class="caracteristica-texto">Entrega rápida en 24-48 horas. Tu tecnología cuando la necesitas.</p>
+                    </div>
+                    
+                    <div class="caracteristica-item">
+                        <div class="caracteristica-icono">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="caracteristica-titulo">Garantía Total</h3>
+                        <p class="caracteristica-texto">Productos originales con garantía oficial. Compra con total confianza.</p>
+                    </div>
+                    
+                    <div class="caracteristica-item">
+                        <div class="caracteristica-icono">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3 class="caracteristica-titulo">Soporte 24/7</h3>
+                        <p class="caracteristica-texto">Asistencia técnica especializada siempre disponible para ti.</p>
+                    </div>
+                    
+                    <div class="caracteristica-item">
+                        <div class="caracteristica-icono">
+                            <i class="fas fa-tag"></i>
+                        </div>
+                        <h3 class="caracteristica-titulo">Mejores Precios</h3>
+                        <p class="caracteristica-texto">Precios competitivos y ofertas exclusivas para nuestros clientes.</p>
+                    </div>
+                </div>
+                
+                <div class="estadisticas-banner">
+                    <div class="estadistica">
+                        <span class="numero-grande">10K+</span>
+                        <span class="texto-estadistica">Clientes Satisfechos</span>
+                    </div>
+                    <div class="estadistica">
+                        <span class="numero-grande">500+</span>
+                        <span class="texto-estadistica">Productos Disponibles</span>
+                    </div>
+                    <div class="estadistica">
+                        <span class="numero-grande">99%</span>
+                        <span class="texto-estadistica">Satisfacción Garantizada</span>
+                    </div>
+                    <div class="estadistica">
+                        <span class="numero-grande">5★</span>
+                        <span class="texto-estadistica">Calificación Promedio</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Productos -->
+    <section id="productos" class="productos-section">
+        <div class="container">
+            <h2>Nuestros Productos</h2>
+            
+            <!-- Filtros de productos -->
+            <div class="filtros">
+                <h3>Filtrar por categoría:</h3>
+                <div class="filtros-buttons">
+                    <button class="filtro-btn active" data-filtro="todos">Todos</button>
+                    <button class="filtro-btn" data-filtro="celulares">📱 Celulares</button>
+                    <button class="filtro-btn" data-filtro="laptops">💻 Laptops</button>
+                    <button class="filtro-btn" data-filtro="impresoras">🖨️ Impresoras</button>
+                    <button class="filtro-btn" data-filtro="accesorios">🖱️ Accesorios</button>
+                </div>
+            </div>
+            
+            <div class="productos-grid">
+                <!-- Celulares -->
+                <div class="producto-card" data-categoria="celulares">
+                    <div class="producto-image">
+                        <img src="images/MOT-RAZR60-BL-telefono-motorola-moto-razr-60-xt2553-1-ds-12512gb-gr-azul-1.png" alt="Motorola Moto Razr 60" onerror="this.src='https://via.placeholder.com/300x300/007ACC/ffffff?text=Motorola+Razr+60'">
+                        <div class="producto-badge">Nuevo</div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>MOTOROLA MOTO RAZR 60</h3>
+                        <p class="producto-descripcion">Teléfono plegable XT2553-1 DS, 12GB+512GB, color azul. Innovación y estilo únicos.</p>
+                        <div class="producto-precio">
+                            <span class="precio-actual">$1,039.99</span>
+                        </div>
+                        <button class="btn-agregar" onclick="agregarCarrito('MOTOROLA MOTO RAZR 60', 1039.99)">
+                            <i class="fas fa-cart-plus"></i> Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+
+                <div class="producto-card" data-categoria="celulares">
+                    <div class="producto-image">
+                        <img src="images/HONOR-400LITE-256-BK.png" alt="Honor 400 Lite" onerror="this.src='https://via.placeholder.com/300x300/1f1f1f/ffffff?text=Honor+400+Lite'">
+                        <div class="producto-badge bestseller">Bestseller</div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>CELULAR HONOR 400 LITE</h3>
+                        <p class="producto-descripcion">12GB+256GB Negro, Display 3500 nits, Cámara frontal 108MP+5MP. Calidad excepcional.</p>
+                        <div class="producto-precio">
+                            <span class="precio-actual">$379.99</span>
+                        </div>
+                        <button class="btn-agregar" onclick="agregarCarrito('CELULAR HONOR 400 LITE', 379.99)">
+                            <i class="fas fa-cart-plus"></i> Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Laptops -->
+                <div class="producto-card" data-categoria="laptops">
+                    <div class="producto-image">
+                        <img src="images/producto_laptop-hp-amd-r5-7520u-2-8ghz-16gb-512gb-ssd-moonlight-blue-15-6fhd-freedos-1.png" alt="HP AMD R5-7520U" onerror="this.src='https://via.placeholder.com/300x300/0066CC/ffffff?text=HP+AMD+R5'">
+                        <div class="producto-badge">Nuevo</div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>LAPTOP HP AMD R5-7520U</h3>
+                        <p class="producto-descripcion">2.8GHz, 16GB RAM, 512GB SSD, Moonlight Blue, 15.6" FHD, FreeDOS</p>
+                        <div class="producto-precio">
+                            <span class="precio-actual">$599.99</span>
+                        </div>
+                        <button class="btn-agregar" onclick="agregarCarrito('LAPTOP HP AMD R5-7520U', 599.99)">
+                            <i class="fas fa-cart-plus"></i> Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+
+                <div class="producto-card" data-categoria="laptops">
+                    <div class="producto-image">
+                        <img src="images/laptop-asus-tuf-gaming-a15-r5-7535hs-3-3ghz-16gb-512gb-ssd-tg-rtx3050-4gb-black-15-6-fhd-freedos-1.png" alt="ASUS TUF Gaming A15" onerror="this.src='https://via.placeholder.com/300x300/FF6600/ffffff?text=ASUS+TUF+Gaming'">
+                        <div class="producto-badge bestseller">Gaming</div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>LAPTOP ASUS TUF GAMING A15</h3>
+                        <p class="producto-descripcion">R5-7535HS 3.3GHz, 16GB RAM, 512GB SSD, RTX 3050 4GB, Black, 15.6" FHD</p>
+                        <div class="producto-precio">
+                            <span class="precio-actual">$1,099.99</span>
+                        </div>
+                        <button class="btn-agregar" onclick="agregarCarrito('LAPTOP ASUS TUF GAMING A15', 1099.99)">
+                            <i class="fas fa-cart-plus"></i> Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Impresoras -->
+                <div class="producto-card" data-categoria="impresoras">
+                    <div class="producto-image">
+                        <img src="images/T730DW.png" alt="Brother T730DW" onerror="this.src='https://via.placeholder.com/300x300/0066CC/ffffff?text=Brother+T730DW'">
+                        <div class="producto-badge">Nuevo</div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>BROTHER T730DW MULTIFUNCIÓN</h3>
+                        <p class="producto-descripcion">Impresora tinta continua con WiFi, dúplex automático, ADF y velocidad de 20PPM</p>
+                        <div class="producto-precio">
+                            <span class="precio-actual">$349.99</span>
+                        </div>
+                        <button class="btn-agregar" onclick="agregarCarrito('BROTHER T730DW MULTIFUNCIÓN', 349.99)">
+                            <i class="fas fa-cart-plus"></i> Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+
+                <div class="producto-card" data-categoria="impresoras">
+                    <div class="producto-image">
+                        <img src="images/L8050.png" alt="Epson EcoTank L8050" onerror="this.src='https://via.placeholder.com/300x300/FF6600/ffffff?text=Epson+L8050'">
+                        <div class="producto-badge bestseller">Fotográfica</div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>EPSON ECOTANK L8050</h3>
+                        <p class="producto-descripcion">Impresora fotográfica de tinta continua, ideal para impresión profesional de alta calidad</p>
+                        <div class="producto-precio">
+                            <span class="precio-actual">$539.99</span>
+                        </div>
+                        <button class="btn-agregar" onclick="agregarCarrito('EPSON ECOTANK L8050', 539.99)">
+                            <i class="fas fa-cart-plus"></i> Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Accesorios -->
+                <div class="producto-card" data-categoria="accesorios">
+                    <div class="producto-image">
+                        <img src="images/910-005469-1.png" alt="Mouse Logitech G502 Hero" onerror="this.src='https://via.placeholder.com/300x300/00B8D4/ffffff?text=Logitech+G502'">
+                        <div class="producto-badge bestseller">Bestseller</div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>MOUSE LOGITECH G502 HERO</h3>
+                        <p class="producto-descripcion">Mouse gamer alámbrico con 11 botones, USB, color negro. Precisión y rendimiento profesional.</p>
+                        <div class="producto-precio">
+                            <span class="precio-actual">$54.99</span>
+                        </div>
+                        <button class="btn-agregar" onclick="agregarCarrito('MOUSE LOGITECH G502 HERO', 54.99)">
+                            <i class="fas fa-cart-plus"></i> Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+
+                <div class="producto-card" data-categoria="accesorios">
+                    <div class="producto-image">
+                        <img src="images/PMO-103-2.png" alt="Mouse Primus Gaming" onerror="this.src='https://via.placeholder.com/300x300/E91E63/ffffff?text=Primus+Gaming'">
+                    </div>
+                    <div class="producto-info">
+                        <h3>MOUSE PRIMUS GAMING</h3>
+                        <p class="producto-descripcion">Mouse gamer alámbrico con 8 botones USB. Diseño ergonómico y gran relación calidad-precio.</p>
+                        <div class="producto-precio">
+                            <span class="precio-actual">$19.99</span>
+                        </div>
+                        <button class="btn-agregar" onclick="agregarCarrito('MOUSE PRIMUS GAMING', 19.99)">
+                            <i class="fas fa-cart-plus"></i> Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filtros de productos -->
+            <div class="filtros">
+                <h3>Filtrar por categoría:</h3>
+                <div class="filtros-buttons">
+                    <button class="filtro-btn active" data-filtro="todos">Todos</button>
+                    <button class="filtro-btn" data-filtro="celulares">📱 Celulares</button>
+                    <button class="filtro-btn" data-filtro="laptops">💻 Laptops</button>
+                    <button class="filtro-btn" data-filtro="auriculares">🎧 Auriculares</button>
+                    <button class="filtro-btn" data-filtro="accesorios">�️ Accesorios</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario de contacto -->
+    <section class="formulario-section">
+        <div class="container">
+            <h2>¿Tienes preguntas? Contáctanos</h2>
+            <form class="contact-form" onsubmit="enviarFormulario(event)">
+                <div class="form-group">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" required minlength="2" maxlength="50">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}" title="Ingresa un número de 10 dígitos">
+                </div>
+                
+                <div class="form-group">
+                    <label for="producto">Producto de interés:</label>
+                    <select id="producto" name="producto" required>
+                        <option value="">Selecciona un producto</option>
+                        <option value="celulares">Celulares</option>
+                        <option value="laptops">Laptops</option>
+                        <option value="impresoras">Impresoras</option>
+                        <option value="accesorios">Accesorios</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required minlength="10" maxlength="500"></textarea>
+                </div>
+                
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Deseo recibir ofertas y novedades por email</label>
+                </div>
+                
+                <button type="submit" class="btn-enviar">
+                    <i class="fas fa-paper-plane"></i> Enviar mensaje
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Información de contacto -->
+    <section class="info-contacto">
+        <div class="container">
+            <div class="contacto-grid">
+                <div class="contacto-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Dirección</h3>
+                    <p>Av. Tecnología 123<br>Ciudad Tech, CP 12345</p>
+                </div>
+                
+                <div class="contacto-item">
+                    <i class="fas fa-phone"></i>
+                    <h3>Teléfono</h3>
+                    <p>(+593) 123-456-789<br>Lun - Vie: 9:00 - 18:00</p>
+                </div>
+                
+                <div class="contacto-item">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>info@techstore.com<br>soporte@techstore.com</p>
+                </div>
+                
+                <div class="contacto-item">
+                    <i class="fas fa-clock"></i>
+                    <h3>Horarios</h3>
+                    <p>Lunes - Viernes: 9:00 - 18:00<br>Sábados: 10:00 - 16:00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechStore</h3>
+                    <p>Tu tienda de confianza para la mejor tecnología. Calidad garantizada y los mejores precios del mercado.</p>
+                     <div class="social-icons">
+                        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Productos</h4>
+                    <ul>
+                        <li><a href="#productos">Celulares</a></li>
+                        <li><a href="#productos">Laptops</a></li>
+                        <li><a href="#productos">Impresoras</a></li>
+                        <li><a href="#productos">Accesorios</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Información</h4>
+                    <ul>
+                        <li><a href="acerca.html">Acerca de nosotros</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="#">Envíos</a></li>
+                        <li><a href="#">Garantías</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Soporte</h4>
+                    <ul>
+                        <li><a href="#">Centro de ayuda</a></li>
+                        <li><a href="#">Devoluciones</a></li>
+                        <li><a href="#">Términos y condiciones</a></li>
+                        <li><a href="#">Política de privacidad</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechStore. Todos los derechos reservados. | Desarrollado para fines educativos</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

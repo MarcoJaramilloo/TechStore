@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - TechStore</title>
+    <link rel="icon" type="image/png" href="images/Gemini_Generated_Image_jbkrocjbkrocjbkr.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/Gemini_Generated_Image_jbkrocjbkrocjbkr.png" alt="TechStore Logo" class="logo-img">
+                <h1>TechStore</h1>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="acerca.html" class="nav-link">Acerca de</a></li>
+                    <li><a href="contacto.html" class="nav-link active">Contacto</a></li>
+                    <li><a href="index.html#productos" class="nav-link">Productos</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <i class="fas fa-shopping-cart"></i>
+                <i class="fas fa-user"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero de Contacto -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Contáctanos</h2>
+                <p>Estamos aquí para ayudarte. Ponte en contacto con nosotros</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Información de contacto principal -->
+    <section class="info-contacto-principal">
+        <div class="container">
+            <div class="contacto-grid-principal">
+                <div class="contacto-info">
+                    <h2>Información de Contacto</h2>
+                    <p>¿Tienes preguntas sobre nuestros productos o servicios? ¡No dudes en contactarnos! Nuestro equipo de atención al cliente está listo para ayudarte.</p>
+                    
+                    <div class="contacto-detalles">
+                        <div class="contacto-item-detalle">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h3>Dirección</h3>
+                                <p>Av. Tecnología 123<br>
+                                Ciudad Tech, CP 12345<br>
+                                Ecuador</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contacto-item-detalle">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h3>Teléfonos</h3>
+                                <p>Principal: (+593) 123-456-789<br>
+                                Soporte: (+593) 123-456-790<br>
+                                Ventas: (+593) 123-456-791</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contacto-item-detalle">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>Correos Electrónicos</h3>
+                                <p>General: info@techstore.com<br>
+                                Soporte: soporte@techstore.com<br>
+                                Ventas: ventas@techstore.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contacto-item-detalle">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h3>Horarios de Atención</h3>
+                                <p>Lunes a Viernes: 9:00 - 18:00<br>
+                                Sábados: 10:00 - 16:00<br>
+                                Domingos: Cerrado</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="redes-sociales-contacto">
+                        <h3>Síguenos en Redes Sociales</h3>
+                        <div class="social-grid">
+                            <a href="#" class="social-link facebook">
+                                <i class="fab fa-facebook-f"></i>
+                                <span>Facebook</span>
+                            </a>
+                            <a href="#" class="social-link twitter">
+                                <i class="fab fa-twitter"></i>
+                                <span>Twitter</span>
+                            </a>
+                            <a href="#" class="social-link instagram">
+                                <i class="fab fa-instagram"></i>
+                                <span>Instagram</span>
+                            </a>
+                            <a href="#" class="social-link youtube">
+                                <i class="fab fa-youtube"></i>
+                                <span>YouTube</span>
+                            </a>
+                            <a href="#" class="social-link linkedin">
+                                <i class="fab fa-linkedin-in"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="#" class="social-link whatsapp">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mapa (simulado) -->
+                <div class="mapa-container">
+                    <h3>Nuestra Ubicación</h3>
+                    <div class="mapa-placeholder">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <p>Av. Tecnología 123<br>Ciudad Tech, Ecuador</p>
+                        <button class="btn-direcciones" onclick="abrirMapa()">
+                            <i class="fas fa-directions"></i>
+                            Cómo llegar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario de contacto mejorado -->
+    <section class="formulario-contacto-completo">
+        <div class="container">
+            <h2>Envíanos un Mensaje</h2>
+            <div class="formulario-grid">
+                <div class="formulario-principal">
+                    <form class="contact-form-completo" onsubmit="enviarFormularioContacto(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nombre">Nombre completo *</label>
+                                <input type="text" id="nombre" name="nombre" required minlength="2" maxlength="50" placeholder="Tu nombre completo">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="apellido">Apellido *</label>
+                                <input type="text" id="apellido" name="apellido" required minlength="2" maxlength="50" placeholder="Tu apellido">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Correo electrónico *</label>
+                                <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="telefono">Teléfono</label>
+                                <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}" placeholder="0123456789">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="asunto">Asunto *</label>
+                                <select id="asunto" name="asunto" required>
+                                    <option value="">Selecciona un asunto</option>
+                                    <option value="consulta-producto">Consulta sobre producto</option>
+                                    <option value="soporte-tecnico">Soporte técnico</option>
+                                    <option value="garantia">Garantía</option>
+                                    <option value="devolucion">Devolución</option>
+                                    <option value="sugerencia">Sugerencia</option>
+                                    <option value="queja">Queja</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="prioridad">Prioridad</label>
+                                <select id="prioridad" name="prioridad">
+                                    <option value="baja">Baja</option>
+                                    <option value="media" selected>Media</option>
+                                    <option value="alta">Alta</option>
+                                    <option value="urgente">Urgente</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="producto-interes">Producto de interés (opcional)</label>
+                            <select id="producto-interes" name="producto-interes">
+                                <option value="">Selecciona un producto</option>
+                                <option value="motorola-razr60">MOTOROLA MOTO RAZR 60</option>
+                                <option value="honor-400lite">CELULAR HONOR 400 LITE</option>
+                                <option value="hp-amd-r5">LAPTOP HP AMD R5-7520U</option>
+                                <option value="asus-tuf-gaming">LAPTOP ASUS TUF GAMING A15</option>
+                                <option value="brother-t730dw">BROTHER T730DW MULTIFUNCIÓN</option>
+                                <option value="epson-l8050">EPSON ECOTANK L8050</option>
+                                <option value="mouse-logitech-g502">MOUSE LOGITECH G502 HERO</option>
+                                <option value="mouse-primus">MOUSE PRIMUS GAMING</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje *</label>
+                            <textarea id="mensaje" name="mensaje" rows="6" required minlength="10" maxlength="1000" placeholder="Describe tu consulta o mensaje..."></textarea>
+                            <small class="char-count">0/1000 caracteres</small>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter">Deseo recibir ofertas y novedades por email</label>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="terminos" name="terminos" required>
+                            <label for="terminos">Acepto los <a href="#" target="_blank">términos y condiciones</a> y la <a href="#" target="_blank">política de privacidad</a> *</label>
+                        </div>
+                        
+                        <button type="submit" class="btn-enviar-completo">
+                            <i class="fas fa-paper-plane"></i> Enviar mensaje
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="info-adicional">
+                    <div class="info-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Tiempo de Respuesta</h3>
+                        <p>Respondemos a todos los mensajes en un máximo de 24 horas durante días hábiles.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <i class="fas fa-headset"></i>
+                        <h3>Soporte Técnico</h3>
+                        <p>¿Problemas técnicos? Nuestro equipo especializado te ayudará a resolverlos.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Garantía</h3>
+                        <p>Todos nuestros productos cuentan con garantía oficial y soporte completo.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <i class="fas fa-truck"></i>
+                        <h3>Envíos</h3>
+                        <p>Envíos gratuitos en compras superiores a $100. Entrega en 24-48 horas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Preguntas Frecuentes</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>¿Cuál es el tiempo de entrega?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Los envíos se realizan en 24-48 horas para la ciudad principal y 3-5 días hábiles para otras ciudades. Los envíos son gratuitos en compras superiores a $100.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>¿Qué garantía tienen los productos?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Todos nuestros productos cuentan con garantía oficial del fabricante, que varía entre 1 y 3 años dependiendo del producto. Además, ofrecemos 30 días de garantía de satisfacción.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>¿Puedo devolver un producto?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, aceptamos devoluciones dentro de los primeros 30 días después de la compra, siempre que el producto esté en perfectas condiciones y con su embalaje original.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>¿Qué métodos de pago aceptan?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Aceptamos tarjetas de crédito y débito (Visa, Mastercard), transferencias bancarias, PayPal y pagos en efectivo en nuestra tienda física.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>¿Ofrecen soporte técnico?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, nuestro equipo de soporte técnico está disponible de lunes a viernes de 9:00 a 18:00. Puedes contactarnos por teléfono, email o chat en línea.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>¿Tienen tienda física?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, nuestra tienda física está ubicada en Av. Tecnología 123, Ciudad Tech. Puedes visitarnos para ver los productos en persona y recibir asesoramiento personalizado.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechStore</h3>
+                    <p>Tu tienda de confianza para la mejor tecnología. Calidad garantizada y los mejores precios del mercado.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Productos</h4>
+                    <ul>
+                        <li><a href="index.html#productos">Celulares</a></li>
+                        <li><a href="index.html#productos">Laptops</a></li>
+                        <li><a href="index.html#productos">Impresoras</a></li>
+                        <li><a href="index.html#productos">Accesorios</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Información</h4>
+                    <ul>
+                        <li><a href="acerca.html">Acerca de nosotros</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="#">Envíos</a></li>
+                        <li><a href="#">Garantías</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Soporte</h4>
+                    <ul>
+                        <li><a href="#">Centro de ayuda</a></li>
+                        <li><a href="#">Devoluciones</a></li>
+                        <li><a href="#">Términos y condiciones</a></li>
+                        <li><a href="#">Política de privacidad</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechStore. Todos los derechos reservados. | Desarrollado para fines educativos</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/contacto.js"></script>
+</body>
+</html>
