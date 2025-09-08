@@ -1,9 +1,15 @@
 # 🛒 TechStore - E-commerce de Tecnología
 
-> Sitio web e-commerce moderno y funcional para la venta de productos tecnológicos desarrollado con HTML5, CSS3 y JavaScript.
+> Sitio web e-commerce moderno y funcional para la venta de productos tecnológicos de## 👨‍💻 Autor
+
+**Marco Jaramillo**
+- Universidad: [Tu Universidad]
+- Materia: Programación Móvil
+- Semestre: Octavo Semestre
+- GitHub: [@MarcoJaramilloo](https://github.com/MarcoJaramilloo)lado con HTML5, CSS3 y JavaScript.
 
 ## 🚀 Demo en Vivo
-[Ver TechStore en GitHub Pages](https://tu-usuario.github.io/techstore)
+[Ver TechStore en GitHub Pages](https://marcojaramilloo.github.io/TechStore)
 
 ## 📋 Descripción del Proyecto
 
@@ -87,8 +93,8 @@ TechStore/
 
 1. **Clonar el repositorio**
 ```bash
-git clone https://github.com/tu-usuario/techstore.git
-cd techstore
+git clone https://github.com/MarcoJaramilloo/TechStore.git
+cd TechStore
 ```
 
 2. **Abrir en navegador**
@@ -108,7 +114,7 @@ start index.html
    - Branch: main / (root)
 
 2. **URL del sitio**
-   - Tu sitio estará disponible en: `https://tu-usuario.github.io/techstore`
+   - Tu sitio estará disponible en: `https://marcojaramilloo.github.io/TechStore`
 
 ## 🛒 Productos Incluidos
 
